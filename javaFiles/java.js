@@ -1,48 +1,25 @@
 // need to determine current timing 
 var currentTime = moment().format("dddd, MMMM Do YYYY");
 var currentHour= moment().format('h:mm:ss a');
+var hours = [7,8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6];
+var militaryHours = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 
 // return the current day and time 
 $("#currentDay").append(currentTime);
 
-const sevenAM =$('#sevenAM').text();
-const eightAM =$('#eightAM').text();
-const nineAM =$('#nineAM').text();
-const tenAM = $('#tenAM').text();
-const elevenAM = $('#elevenAM').text();
-const twelvePM = $('#twelvePM').text();
-const onePM = $('#onePM').text();
-const twoPM = $('#twoPM').text();
-const threePM = $('#threePM').text();
-const fourPM = $('#fourPM').text();
-const fivePM = $('#fivePM').text();
-const sixPM = $('#sixPM').text();
-const timeBlock = $(".time-block");
 
-// start the functions for each one
-
-$.each(timeBlock, function (index, block) {
-
-    var dataHour = $(block).data().hour;
-
-    if (dataHour > currentHour) {
-        console.log("future");
-        $(block).addClass("future");
+//function to decern if time sections are past current or future
+function compareTime() {
+    if (militaryHours[i] > currentHour) {
+        inpDiv.addClass("future");
     }
-
-    if (dataHour < currentHour) {
-        console.log("past");
-        $(block).addClass("past");
+    else if (militaryHours[i] < currentHour) {
+        inpDiv.addClass("past");
     }
-
-    if (dataHour === currentHour) {
-        console.log("current");
-        $(block).addClass("present");
+    else if (militaryHours[i] == currentHour) {
+        inpDiv.addClass("present");
     }
-
-});
-
-
+}
 
 $('#button7').click(function () {
 
