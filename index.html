@@ -2,25 +2,18 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <!-- Link to stylesheet in bootstrap. Provided in base HTML-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <!--Font awesome link  -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <!-- google font sheet -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-  <!-- My CSS sheet -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./CssFiles/style.css">
-
 
   <!-- Title of the tab -->
   <title>Work Day Scheduler</title>
-
+  
 </head>
 
 
@@ -38,100 +31,97 @@
     <!-- start all of the time blocks -->
     <!-- these time blocks are created with the assumption that the work day starts at 7am and ends by6pm -->
     <div class="row">
-      <div class="col hour" id="sevenAM"><br>7:00 a.m.</div>
-      <input class="col-9 time-block" data-hour="7" id="sevenRes"></input>
+      <div class="colHour" id="sevenAM"><br>7:00 a.m.</div>
+      <input class="col-9 time-block" dataHour="7" id="sevenRes"></input>
       <br>
-      <button type="button" class="btn btn-outline-success" id="button7">Update</button>
+      <button type="button" class="btn btn-secondary" id="button7">Update</button>
     </div>
     <br>
     <div class="row">
-      <div class="col hour" id="eightAM"><br>8:00 a.m.</div>
-      <input class="col-9 time-block" data-hour="8" id="eightRes"></input>
+      <div class="colHour" id="eightAM"><br>8:00 a.m.</div>
+      <input class="col-9 time-block" dataHour="8" id="eightRes"></input>
       <br>
-      <button type="button" class="btn btn-outline-success" id="button8">Update</button>
+      <button type="button" class="btn btn-secondary" id="button8">Update</button>
     </div>
     <br>
     <div class="row">
-      <div class="col hour" id="nineAM"><br>9:00 a.m.</div>
+      <div class="colHour" id="nineAM"><br>9:00 a.m.</div>
       <input class="col-9 time-block" data-hour="9" id="nineRes"></input>
       <br>
-      <button type="button" class="btn btn-outline-success" id="button9">Update</button>
+      <button type="button" class="btn btn-secondary" id="button9">Update</button>
     </div>
     <br>
     <div class="row">
-      <div class="col hour" id="tenAM"><br>10:00 a.m.</div>
+      <div class="colHour" id="tenAM"><br>10:00 a.m.</div>
       <input class="col-9 time-block" data-hour="10" id="tenRes"></input>
       <br>
-      <button type="button" class="btn btn-outline-success" id="button10">Update</button>
+      <button type="button" class="btn btn-secondary" id="button10">Update</button>
     </div>
     <br>
     <div class="row">
-      <div class="col hour" id="elevenAM"><br>11:00 a.m.</div>
+      <div class="colHour" id="elevenAM"><br>11:00 a.m.</div>
       <input class="col-9 time-block" data-hour="11" id="elevenRes"></input>
       <br>
-      <button type="button" class="btn btn-outline-success" id="button11">Update</button>
+      <button type="button" class="btn btn-secondary" id="button11">Update</button>
     </div>
     <br>
     <div class="row">
-      <div class="col hour" id="twelvePM"><br>12:00 p.m.</div>
+      <div class="colHour" id="twelvePM"><br>12:00 p.m.</div>
       <input class="col-9 time-block" data-hour="12" id="twelveRes"></input>
       <br>
-      <button type="button" class="btn btn-outline-success" id="button12">Update</button>
+      <button type="button" class="btn btn-secondary" id="button12">Update</button>
     </div>
     <br>
     <div class="row">
-      <div class="col hour" id="onePM"><br>1:00 p.m.</div>
+      <div class="colHour" id="onePM"><br>1:00 p.m.</div>
       <input class="col-9 time-block" data-hour="13" id="oneRes"></input>
       <br>
-      <button type="button" class="btn btn-outline-success" id="button1">Update</button>
+      <button type="button" class="btn btn-secondary" id="button1">Update</button>
     </div>
     <br>
     <div class="row">
-      <div class="col hour" id="twoPM"><br>2:00 p.m.</div>
+      <div class="colHour" id="twoPM"><br>2:00 p.m.</div>
       <input class="col-9 time-block" data-hour="14" id="twoRes"></input>
       <br>
-      <button type="button" class="btn btn-outline-success" id="button2">Update</button>
+      <button type="button" class="btn btn-secondary" id="button2">Update</button>
     </div>
     <br>
     <div class="row">
-      <div class="col hour" id="threePM"><br>3:00 p.m.</div>
+      <div class="colHour" id="threePM"><br>3:00 p.m.</div>
       <input class="col-9 time-block" data-hour="15" id="threeRes"></input>
       <br>
-      <button type="button" class="btn btn-outline-success" id="button3">Update</button>
+      <button type="button" class="btn btn-secondary" id="button3">Update</button>
     </div>
     <br>
     <div class="row">
-      <div class="col hour" id="fourPM"><br>4:00 p.m.</div>
+      <div class="colHour" id="fourPM"><br>4:00 p.m.</div>
       <input class="col-9 time-block" data-hour="16" id="fourRes"></input>
       <br>
-      <button type="button" class="btn btn-outline-success" id="button4">Update</button>
+      <button type="button" class="btn btn-secondary" id="button4">Update</button>
     </div>
     <br>
     <div class="row">
-      <div class="col hour" id="fivePM"><br>5:00 p.m.</div>
+      <div class="colHour" id="fivePM"><br>5:00 p.m.</div>
       <input class="col-9 time-block" data-hour="17" id="fiveRes"></input>
       <br>
-      <button type="button" class="btn btn-outline-success" id="button5">Update</button>
+      <button type="button" class="btn btn-secondary" id="button5">Update</button>
     </div>
     <br>
     <div class="row">
-      <div class="col hour" id="sixPM"><br>6:00 p.m.</div>
+      <div class="colHour" id="sixPM"><br>6:00 p.m.</div>
       <input class="col-9 time-block" data-hour="18" id="sixRes"></input>
       <br>
-      <button type="button" class="btn btn-outline-success" id="button6">Update</button>
+      <button type="button" class="btn btn-secondary" id="button6">Update</button>
     </div>
   </div>
-  <br><br><br>
 
-
-
-  <!-- My java Script file -->
-  <script src="./javaFiles/java.js"></script>
-
-  <!-- Scripts -->
-
+  <!-- JS files: -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <!-- this one gets rid of the moment error from Chrome -->
+  <script src="./javaFiles/moment.js"></script>
+  <!-- My java Script file -->
+  <script src="./javaFiles/java.js"></script>
 
 </body>
 

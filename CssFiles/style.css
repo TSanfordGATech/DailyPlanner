@@ -6,54 +6,59 @@
     box-sizing: border-box;
 }
 
+/* making the jumotron fit my page */
+.jumbotron {
+    text-align: center;
+    border-bottom: 2px solid slategrey;
+}
 /* Adding an image to the background for some flare */
 
 body {
     background-image: url(https://jooinn.com/images/abstract-background-278.jpg);
+    line-height: 1;
 }
 
 /* Format the container for the hourly break down*/
 .container {
     max-width: 800px;
     margin: auto;
-    padding: 10px;
-    float: left;
 }
 
+/* .colHour {} */
 
+/* Each hour might have its own formatting ID */
+/* #sevenAM  {} */
 
-
-
-
-
-/* Media Queries and imports */
-
-@media (max-width: 768px) {
-.container-fluid {
-    padding-left: 0;
-    padding-right: 0;
-    }
-.plannerRow {
-    height: 100%;
-    border-radius: 10;
-    margin: 10px;
-    }
-.saveIcon { border-radius: 0 0 15px 15px; }
-.timeBox { border-radius: 15px 15px 0 0; }
+button {
+    background-color: slategrey;
 }
 
-.wrapper { 
-padding: 20px;     
-} 
-  
-@keyframes shadow-pulse {
-0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
-    }
-100% {
-    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
-    }
+/* Formatting of each rows time block */
+.time-block{
+    text-align: center;
+    border-radius: 15px;
+    height: 50px;
+  }
+
+/* formatting of the hours  */
+.colHour {
+    color: #000000;
+    border-top: 2px dashed slategrey;
+  }
+
+/* format for if the time is in the past or future */
+
+.past { 
+    background-color: rgb(172, 110, 110);
+    color: linen;
 }
-.shadowPulse {
-animation: shadow-pulse 1s infinite;
+
+.present {
+    background-color: linen;
 }
+
+.future {
+    background-color: green;
+    color: linen;
+}
+
