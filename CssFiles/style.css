@@ -1,0 +1,88 @@
+/* Start styling with body */
+
+body {
+    /* Font items */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+
+    /*Container padding */
+    padding-top: 90px;
+    vertical-align: middle;
+
+    /* repeating background image to add some flare */
+    background-image: url(https://jooinn.com/images/abstract-background-278.jpg);
+}
+
+/* Style the navigation bar  */
+.navbar {
+    /* background color */
+    background-color: gray;
+    /* text formatting in nav bar */
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 200;
+    /* Adding a border to the bottom with min wasted space */
+    padding-bottom: 0%;
+    border-bottom: solid;
+    border-bottom-color: steelblue;
+}
+
+/* format the headers within the navigation bar */
+#navigation-title  #navigation-subtitle {
+    font-size: 35px;
+    text-align: center;
+}
+
+/* create the container sizing  */
+input {
+    background: transparent;
+    padding-left: 3px;
+}
+
+/* Make the columns */
+.col-md-1, .col-md-2, .col-md-9 {
+    padding: 0;
+}
+
+/* Format the planning buckets */
+#plannerForm {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: slategrey;
+    padding: 40%;
+}
+
+
+
+
+/* Media Queries and imports */
+
+@media (max-width: 768px) {
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    }
+.plannerRow {
+    height: 100%;
+    border-radius: 10;
+    margin: 10px;
+    }
+.saveIcon { border-radius: 0 0 15px 15px; }
+.timeBox { border-radius: 15px 15px 0 0; }
+}
+
+.wrapper { 
+padding: 20px;     
+} 
+  
+@keyframes shadow-pulse {
+0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }
+100% {
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+    }
+}
+.shadowPulse {
+animation: shadow-pulse 1s infinite;
+}
