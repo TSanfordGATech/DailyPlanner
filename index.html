@@ -6,14 +6,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- My CSS sheet -->
-  <link rel="stylesheet" href="./CssFiles/style.css">
-  <!--Font awesome link  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+
   <!-- Link to stylesheet in bootstrap. Provided in base HTML-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <!--Font awesome link  -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- google font sheet -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <!-- My CSS sheet -->
+  <link rel="stylesheet" href="./CssFiles/style.css">
+
 
   <!-- Title of the tab -->
   <title>Work Day Scheduler</title>
@@ -28,51 +31,107 @@
     <h1 class="display-3">Daily Planner</h1>
     <!-- starting calendar piece -->
     <p class="lead">A simple calendar app for scheduling your priorities</p>
+    <p id="currentDay" class="lead"></p>
   </header>
 
   <div class="container">
-    <!-- Timeblocks go here -->
-    <input type="text" class="txtb" placeholder="Add your task">
-    <div class="itemScheduled">
-      <h3>Upcoming items for Today</h3>
-    <div class="task">
-      task
-      <i class="fas fa-trash-alt"></i>
-      <i class="fas fa-check"></i>
+    <!-- start all of the time blocks -->
+    <!-- these time blocks are created with the assumption that the work day starts at 7am and ends by6pm -->
+    <div class="row">
+      <div class="col hour" id="sevenAM"><br>7:00 a.m.</div>
+      <input class="col-9 time-block" data-hour="7" id="sevenRes"></input>
+      <br>
+      <button type="button" class="btn btn-outline-success" id="button7">Update</button>
     </div>
+    <br>
+    <div class="row">
+      <div class="col hour" id="eightAM"><br>8:00 a.m.</div>
+      <input class="col-9 time-block" data-hour="8" id="eightRes"></input>
+      <br>
+      <button type="button" class="btn btn-outline-success" id="button8">Update</button>
     </div>
-
-    <!-- Create an area to see the completed items -->
-    <div class="comp">
-      <h3>Completed Items</h3>
+    <br>
+    <div class="row">
+      <div class="col hour" id="nineAM"><br>9:00 a.m.</div>
+      <input class="col-9 time-block" data-hour="9" id="nineRes"></input>
+      <br>
+      <button type="button" class="btn btn-outline-success" id="button9">Update</button>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col hour" id="tenAM"><br>10:00 a.m.</div>
+      <input class="col-9 time-block" data-hour="10" id="tenRes"></input>
+      <br>
+      <button type="button" class="btn btn-outline-success" id="button10">Update</button>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col hour" id="elevenAM"><br>11:00 a.m.</div>
+      <input class="col-9 time-block" data-hour="11" id="elevenRes"></input>
+      <br>
+      <button type="button" class="btn btn-outline-success" id="button11">Update</button>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col hour" id="twelvePM"><br>12:00 p.m.</div>
+      <input class="col-9 time-block" data-hour="12" id="twelveRes"></input>
+      <br>
+      <button type="button" class="btn btn-outline-success" id="button12">Update</button>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col hour" id="onePM"><br>1:00 p.m.</div>
+      <input class="col-9 time-block" data-hour="13" id="oneRes"></input>
+      <br>
+      <button type="button" class="btn btn-outline-success" id="button1">Update</button>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col hour" id="twoPM"><br>2:00 p.m.</div>
+      <input class="col-9 time-block" data-hour="14" id="twoRes"></input>
+      <br>
+      <button type="button" class="btn btn-outline-success" id="button2">Update</button>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col hour" id="threePM"><br>3:00 p.m.</div>
+      <input class="col-9 time-block" data-hour="15" id="threeRes"></input>
+      <br>
+      <button type="button" class="btn btn-outline-success" id="button3">Update</button>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col hour" id="fourPM"><br>4:00 p.m.</div>
+      <input class="col-9 time-block" data-hour="16" id="fourRes"></input>
+      <br>
+      <button type="button" class="btn btn-outline-success" id="button4">Update</button>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col hour" id="fivePM"><br>5:00 p.m.</div>
+      <input class="col-9 time-block" data-hour="17" id="fiveRes"></input>
+      <br>
+      <button type="button" class="btn btn-outline-success" id="button5">Update</button>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col hour" id="sixPM"><br>6:00 p.m.</div>
+      <input class="col-9 time-block" data-hour="18" id="sixRes"></input>
+      <br>
+      <button type="button" class="btn btn-outline-success" id="button6">Update</button>
     </div>
   </div>
+  <br><br><br>
 
-  <!-- insert in the jquery function for the pop up -->
-  <script type="text/javascript">
-  
-    $(".txtb").on("keyup", function(e){
-      // key code 13 stands for enter, so if they hit enter then the line is added with their text
-      if(e.keycode == 13 && $(".txtb").val() != "")
-      { 
-        var task = $("<div class='task'></div").text($(".txtb").val());
-        // making the trash can remove the task
-        var del =$("<i class='fas fa-trash-alt'></i>");
-        // making the check complete the task 
-        var check =$("<i class='fas fa-check'></i>");
-        // make them show under one another
-        task.append(del,check)
-        
 
-        $(".itemScheduled").append(task);
-        // create the ability to clear it.
-        $(".txtb").val("")
-      }
-    });
-  </script>
 
   <!-- My java Script file -->
   <script src="./javaFiles/java.js"></script>
+
+  <!-- Scripts -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
 </body>
 

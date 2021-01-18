@@ -12,44 +12,19 @@ body {
     background-image: url(https://jooinn.com/images/abstract-background-278.jpg);
 }
 
-/* Format the container */
+/* Format the container for the hourly break down*/
 .container {
     max-width: 800px;
     margin: auto;
     padding: 10px;
+    float: left;
 }
 
-/* Format the text container */
-.txtb{
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid;
-    background: none;
-    padding: 10px;
-    outline: none;  
-    font-size: 18px;
-}
 
-.task {
-    width: 100%;
-    background: lightgrey;
-    margin: 10px 0;
-    overflow: hidden;
-}
 
-.task i{
-    float: right;
-    margin-left: 20px;
-    margin-right: 2px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    cursor: pointer;
-}
 
-.comp .task {
-    background-color: lightslategray;
-    color: linen;
-}
+
+
 
 /* Media Queries and imports */
 
