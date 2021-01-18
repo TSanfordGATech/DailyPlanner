@@ -2,20 +2,19 @@
 A simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
 
+## Contact information and Deployment
 Created by: Tori Sanford
 Date: 01/17/2021
 Contact: Tori.danielle.clark91@gmail.com
 Link to deployed project: ****Put in at end
 Screen shot of completed assignment: ![Final Screen shot](./images/codequize.png) ****Put in at end
 
-About this Project: 
+## About this Project: 
 This project is my third party web API's homework assignment. I am tasked with creating a daily planner for a user to input their work hour by hour. 
 
-What I learned from this project: 
+## What I learned from this project: 
 *****Update at end
 
-
-User Story, acceptance criteria, and grading requirements:
 
 ## User Story
 
