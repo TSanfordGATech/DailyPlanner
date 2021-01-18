@@ -1,59 +1,55 @@
-/* Start styling with body */
+/* Format all  */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+/* Adding an image to the background for some flare */
 
 body {
-    /* Font items */
-    font-family: 'Times New Roman', Times, serif;
-    font-size: medium;
-
-    /*Container padding */
-    padding-top: 90px;
-    vertical-align: middle;
-
-    /* repeating background image to add some flare */
     background-image: url(https://jooinn.com/images/abstract-background-278.jpg);
 }
 
-/* Style the navigation bar  */
-.navbar {
-    /* background color */
-    background-color: gray;
-    /* text formatting in nav bar */
-    text-align: center;
-    color: whitesmoke;
-    font-weight: 200;
-    /* Adding a border to the bottom with min wasted space */
-    padding-bottom: 0%;
-    border-bottom: solid;
-    border-bottom-color: steelblue;
+/* Format the container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
 }
 
-/* format the headers within the navigation bar */
-#navigation-title  #navigation-subtitle {
-    font-size: 35px;
-    text-align: center;
+/* Format the text container */
+.txtb{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid;
+    background: none;
+    padding: 10px;
+    outline: none;  
+    font-size: 18px;
 }
 
-/* create the container sizing  */
-input {
-    background: transparent;
-    padding-left: 3px;
+.task {
+    width: 100%;
+    background: lightgrey;
+    margin: 10px 0;
+    overflow: hidden;
 }
 
-/* Make the columns */
-.col-md-1, .col-md-2, .col-md-9 {
-    padding: 0;
+.task i{
+    float: right;
+    margin-left: 20px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    cursor: pointer;
 }
 
-/* Format the planning buckets */
-#plannerForm {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: slategrey;
-    padding: 40%;
+.comp .task {
+    background-color: lightslategray;
+    color: linen;
 }
-
-
-
 
 /* Media Queries and imports */
 
