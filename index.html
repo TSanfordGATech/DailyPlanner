@@ -2,19 +2,22 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- My CSS sheet -->
-  <link rel="stylesheet" href="./CssFiles/style.css" />
+  <link rel="stylesheet" href="./CssFiles/style.css">
   <!--Font awesome link  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
   <!-- Link to stylesheet in bootstrap. Provided in base HTML-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <!-- Link to the jquery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
   <!-- Title of the tab -->
   <title>Work Day Scheduler</title>
+
 </head>
 
 
@@ -32,70 +35,42 @@
     <input type="text" class="txtb" placeholder="Add your task">
     <div class="itemScheduled">
       <h3>Upcoming items for Today</h3>
-      <div class="task">
-        Input text
-        <!-- insert the trash can icon to delete -->
-        <i class="fas fa-trash-alt"></i>
-        <!-- insert the check icon for complete -->
-        <i class="fas fa-check"></i>
-      </div>
-      <!-- repeat for rows -->
-      <div class="task">
-        Input text
-        <!-- insert the trash can icon to delete -->
-        <i class="fas fa-trash-alt"></i>
-        <!-- insert the check icon for complete -->
-        <i class="fas fa-check"></i>
-      </div>
-      <!-- repeat for rows -->
-      <div class="task">
-        Input text
-        <!-- insert the trash can icon to delete -->
-        <i class="fas fa-trash-alt"></i>
-        <!-- insert the check icon for complete -->
-        <i class="fas fa-check"></i>
-      </div>
-      <!-- repeat for rows -->
-      <div class="task">
-        Input text
-        <!-- insert the trash can icon to delete -->
-        <i class="fas fa-trash-alt"></i>
-        <!-- insert the check icon for complete -->
-        <i class="fas fa-check"></i>
-      </div>
+    <div class="task">
+      task
+      <i class="fas fa-trash-alt"></i>
+      <i class="fas fa-check"></i>
     </div>
+    </div>
+
     <!-- Create an area to see the completed items -->
     <div class="comp">
       <h3>Completed Items</h3>
-      <div class="task">
-        Input text
-        <!-- insert the trash can icon to delete -->
-        <i class="fas fa-trash-alt"></i>
-      </div>
-      <!-- repeat for rows -->
-      <div class="task">
-        Input text
-        <!-- insert the trash can icon to delete -->
-        <i class="fas fa-trash-alt"></i>
-      </div>
-      <div class="task">
-        Input text
-        <!-- insert the trash can icon to delete -->
-        <i class="fas fa-trash-alt"></i>
-      </div>
-      <!-- repeat for rows -->
-      <div class="task">
-        Input text
-        <!-- insert the trash can icon to delete -->
-        <i class="fas fa-trash-alt"></i>
-      </div>
     </div>
   </div>
 
+  <!-- insert in the jquery function for the pop up -->
+  <script type="text/javascript">
+  
+    $(".txtb").on("keyup", function(e){
+      // key code 13 stands for enter, so if they hit enter then the line is added with their text
+      if(e.keycode == 13 && $(".txtb").val() != "")
+      { 
+        var task = $("<div class='task'></div").text($(".txtb").val());
+        // making the trash can remove the task
+        var del =$("<i class='fas fa-trash-alt'></i>");
+        // making the check complete the task 
+        var check =$("<i class='fas fa-check'></i>");
+        // make them show under one another
+        task.append(del,check)
+        
 
-  <!-- Jquery links -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        $(".itemScheduled").append(task);
+        // create the ability to clear it.
+        $(".txtb").val("")
+      }
+    });
+  </script>
+
   <!-- My java Script file -->
   <script src="./javaFiles/java.js"></script>
 
