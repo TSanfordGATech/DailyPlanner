@@ -20,30 +20,20 @@ body {
 
 /* Format the container for the hourly break down*/
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
+    align-self: auto;
 }
 
-/* .colHour {} */
-
-/* Each hour might have its own formatting ID */
-/* #sevenAM  {} */
-
-button {
+#button-addon1 {
     background-color: slategrey;
 }
 
 /* Formatting of each rows time block */
 .time-block{
-    text-align: center;
-    border-radius: 15px;
-    height: 50px;
-  }
-
-/* formatting of the hours  */
-.colHour {
-    color: #000000;
-    border-top: 2px dashed slategrey;
+    text-align: left;
+    border-radius: 10px;
+    height: 50px; 
   }
 
 /* format for if the time is in the past or future */
@@ -58,7 +48,7 @@ button {
 }
 
 .future {
-    background-color: green;
+    background-color:lightgreen;
     color: linen;
 }
 
