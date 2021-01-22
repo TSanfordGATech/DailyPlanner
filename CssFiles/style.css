@@ -10,9 +10,11 @@
 .jumbotron {
     text-align: center;
     border-bottom: 2px solid slategrey;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
-/* Adding an image to the background for some flare */
 
+/* Adding an image to the background for some flare- this applies to the whole thing*/
 body {
     background-image: url(https://jooinn.com/images/abstract-background-278.jpg);
     line-height: 1;
@@ -23,24 +25,41 @@ body {
     max-width: 1000px;
     margin: auto;
     align-self: auto;
+    /* Remove this, using it to define my container space */
+    border-style: dashed;
 }
 
 /* This is the save button on the hour by hour planner */
 #button-addon1 {
     background-color: slategrey;
-    border-radius: 1%;
-    border-bottom: linen;
     color: linen;
-    margin-bottom: 1%;
-    
+    height: 60px; 
+    text-align: center;
 }
 
-/* Formatting of each rows time block */
-.time-block{
-    text-align: left;
-    border-radius: 10px;
-    height: 50px; 
+/* Formatting of each rows time block- this is the whole row where the hour, input, etc. all fall into */
+#indRow {
+    margin-top: 1%;
+    /* background-color: gray; */
+    border-radius: 5px;
+    height: 70px; 
+    padding-bottom: 1%;
+    padding-top: 1%;
   }
+
+/* Formatting the hours column */
+#hourlyBlock {
+    text-align: left;
+    float: inline-start;
+    background-color: grey;
+    color: linen;
+    font-size: large;
+    font-weight: bold;
+}
+
+/* Formatting the input column */
+#inputColumn {
+}
 
 /* format for if the time is in the past or future */
 

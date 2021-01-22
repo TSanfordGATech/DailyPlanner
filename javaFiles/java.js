@@ -1,9 +1,9 @@
 // need to determine current timing 
-var topDate = moment().format("dddd, MMMM Do YYYY");
+var topDate = moment().format("dddd- MMMM Do, YYYY");
 var currentHour = moment().hour();
 var hours = [7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6];
 var militaryHours = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
-var newRow = $("<div class='row time-block'>" + hours[i] + "</div>");
+var newRow = $("<div class='row-time-block'>" + hours[i] + "</div>");
 
 // return the current day and time 
 $("#currentDay").append(topDate);
@@ -14,10 +14,15 @@ $("#currentDay").append(topDate);
 //time blocks for standard business hours listed in rows
 for (var i = 0; i < hours.length; i++) {
     //variables for sections of the website
-    var newRow = $("<div class='row time-block'></div>");
-    var hourDiv = $("<div class='col-md-1 hour'>" + hours[i] + "</div>");
-    var descDiv = $("<div class='input-group mb-1 col-md-8'>" + "</div>");
+    // Overall row for each time bloack
+    var newRow = $("<div class='row-time-block' id='indRow'></div>");
+    // this is the column for the time to be displayed into each row
+    var hourDiv = $("<div class='col-md-2 hour' id='hourlyBlock'>" + hours[i] + "</div>");
+    // the column that the user types into
+    var descDiv = $("<div class='input-group mb-1 col-md-12'>" + "</div>");
+    // the input area and type
     var inpDiv = $("<input type='text' class='form-control description pb-5' placeholder='' aria-label='description' aria-describedby='button-addon2'>");
+    // the save button for the
     var btnDiv = $("<button class='saveBtn btn' type='button' id='button-addon1'>" + "Save" + "</button>");
     //pull previous tasks from local storage on refresh
     var prevTask = localStorage.getItem(hours[i]);
