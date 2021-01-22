@@ -25,8 +25,14 @@ body {
     align-self: auto;
 }
 
+/* This is the save button on the hour by hour planner */
 #button-addon1 {
     background-color: slategrey;
+    border-radius: 1%;
+    border-bottom: linen;
+    color: linen;
+    margin-bottom: 1%;
+    
 }
 
 /* Formatting of each rows time block */
