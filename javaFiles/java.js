@@ -10,20 +10,25 @@ $("#currentDay").append(topDate);
 
 // Putting time blocks here instead of on HTML to make it cleaner 
 //function to decern if time sections are past current or future
-
 //time blocks for standard business hours listed in rows
 for (var i = 0; i < hours.length; i++) {
     //variables for sections of the website
+
     // Overall row for each time bloack
     var newRow = $("<div class='row-time-block' id='indRow'></div>");
+
     // this is the column for the time to be displayed into each row
-    var hourDiv = $("<div class='col-md-2 hour' id='hourlyBlock'>" + hours[i] + "</div>");
-    // the column that the user types into
+    var hourDiv = $("<div class='col-md-1 hour' id='hourlyBlock'>" + hours[i] + "</div>");
+
+    // the column outline for the user input
     var descDiv = $("<div class='input-group mb-1 col-md-12'>" + "</div>");
-    // the input area and type
+
+    // the input area and type, inside of the column defined above. 
     var inpDiv = $("<input type='text' class='form-control description pb-5' placeholder='' aria-label='description' aria-describedby='button-addon2'>");
+    
     // the save button for the
     var btnDiv = $("<button class='saveBtn btn' type='button' id='button-addon1'>" + "Save" + "</button>");
+    
     //pull previous tasks from local storage on refresh
     var prevTask = localStorage.getItem(hours[i]);
 
@@ -35,7 +40,7 @@ for (var i = 0; i < hours.length; i++) {
     $(".container").append(newRow);
 
     //add am or pm to hour div
-    if (hours[i] > 8) {
+    if (hours[i] < 12) {
         hourDiv.append(" am");
     }
     else {

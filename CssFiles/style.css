@@ -25,22 +25,19 @@ body {
     max-width: 1000px;
     margin: auto;
     align-self: auto;
-    /* Remove this, using it to define my container space */
-    border-style: dashed;
 }
 
 /* This is the save button on the hour by hour planner */
 #button-addon1 {
     background-color: slategrey;
     color: linen;
-    height: 60px; 
+    height: 57px; 
     text-align: center;
 }
 
 /* Formatting of each rows time block- this is the whole row where the hour, input, etc. all fall into */
 #indRow {
     margin-top: 1%;
-    /* background-color: gray; */
     border-radius: 5px;
     height: 70px; 
     padding-bottom: 1%;
@@ -50,7 +47,6 @@ body {
 /* Formatting the hours column */
 #hourlyBlock {
     text-align: left;
-    float: inline-start;
     background-color: grey;
     color: linen;
     font-size: large;
@@ -58,22 +54,27 @@ body {
 }
 
 /* Formatting the input column */
-#inputColumn {
+#inputArea {
+    margin-top: auto;
 }
 
-/* format for if the time is in the past or future */
+/* format for if the time is in the past or future and clean up those blocks formatting*/
+
 
 .past { 
+    padding-top: 1%;
+    cursor: pointer;
     background-color: rgb(172, 110, 110);
     color: linen;
 }
 
 .present {
+    padding-top: 1%;
     background-color: linen;
 }
 
 .future {
+    padding-top: 1%;
     background-color:lightgreen;
-    color: linen;
 }
 
