@@ -59,12 +59,15 @@ for (var i = 0; i < hours.length; i++) {
 function compareTime() {
     if (militaryHours[i] > currentHour) {
         inpDiv.addClass("future");
+        inpDiv.attr("title", "future");
     }
     else if (militaryHours[i] < currentHour) {
         inpDiv.addClass("past");
+        inpDiv.attr("title", "past");
     }
     else if (militaryHours[i] == currentHour) {
         inpDiv.addClass("present");
+        inpDiv.attr("title", "present");
     }
 }
 

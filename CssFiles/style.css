@@ -71,10 +71,12 @@ body {
 .present {
     padding-top: 1%;
     background-color: linen;
+    cursor: pointer;
 }
 
 .future {
     padding-top: 1%;
-    background-color:lightgreen;
+    background-color: #CFF061;
+    cursor: pointer;
 }
 
